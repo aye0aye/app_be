@@ -12,6 +12,21 @@ resources:
       isPull: false
       versionName: latest
 
+jobs:
+#---------------------------------------------------------------#
+#----------------------------   Dev   --------------------------#
+#---------------------------------------------------------------#
+
+# runCI job that builds and pushes artifact using Shippable CI
+  - name: app_be_runCI
+    type: runCI
+    dependencyMode: strict
+    triggerMode: parallel
+    steps:
+      - OUT: dh_img_app_be
+    flags:
+      - dev
+
 # Language setting http://docs.shippable.com/ci/languages/python/
 language: python
 
