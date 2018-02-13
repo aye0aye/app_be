@@ -1,2 +1,2 @@
-# app_be
-Back end of demo app
+# vote_be
+Backend component of the voting application
